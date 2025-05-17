@@ -1,0 +1,137 @@
+/* style.css */
+:root {
+    --navbar-height: 56px;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+main {
+    flex-grow: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+}
+
+section {
+    padding: 40px 0;
+}
+
+/* Specific Section Styling */
+#home {
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#home .lead {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#home a {
+    color: #f8f9fa;
+}
+
+.profile-picture {
+    max-width: 250px;
+    width: 100%;
+    display: block;
+}
+
+#about h2 {
+    margin-bottom: 1rem;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
+/* Alternating Section Backgrounds */
+main > section:nth-child(odd) { /* Home (1st), About (3rd) */
+    background-color: #f0f0f0; /* Light grey */
+    color: #212529;
+}
+
+main > section:nth-child(even) { /* Projects (2nd), Contact (4th) */
+    background-color: #ffffff; /* White */
+    color: #212529;
+}
+
+/* Override for #home since it's odd but has an image background */
+#home {
+    background-color: transparent; /* Or a fallback color if image fails */
+    color: #f0f0f0; /* Text color specifically for home */
+}
+#home a { /* Specific link color for home if needed */
+    color: #f8f9fa;
+}
+
+
+/* Full Height Sections & Content Centering */
+@media (min-width: 768px) {
+    main > section {
+        min-height: calc(100vh - var(--navbar-height));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main > section > .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    /* Responsive font sizes for larger screens */
+    #home h1 {
+        font-size: 5.5rem;
+    }
+
+    #home .lead {
+        font-size: 2.25rem;
+    }
+}
+
+/* Card Media Styling */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.card-img-top:focus {
+    outline: 2px solid var(--bs-primary);
+}
