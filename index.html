@@ -32,6 +32,10 @@
                                 @click="activeSection = 'projects'">Projects</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" :class="{ 'active': activeSection === 'models' }" href="#models"
+                                @click="activeSection = '3d-models'">Models</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" :class="{ 'active': activeSection === 'about' }" href="#about"
                                 @click="activeSection = 'about'">About</a>
                         </li>
@@ -68,6 +72,20 @@
                 </div>
             </section>
 
+            <!-- Section: 3D Models -->
+            <section id="models">
+                <div class="container">
+                    <h2 class="text-center mb-4">Models</h2>
+                    <div class="row">
+                        <model-viewer-card v-for="model in models" :key="model.id" :id="model.id" :src="model.src"
+                            :alt="model.alt" :poster="model.poster" :title="model.title"
+                            :description="model.description" :camera-orbit="model.cameraOrbit"
+                            :exposure="model.exposure" :shadow-intensity="model.shadowIntensity"
+                            :environment-image="model.environmentImage"></model-viewer-card>
+                    </div>
+                </div>
+            </section>
+
             <!-- Section: About -->
             <section id="about">
                 <div class="container">
@@ -99,7 +117,8 @@
                     <p>You can email me at <a href="mailto:isrichards6@gmail.com">isrichards6@gmail.com</a> or connect
                         with me on <a href="https://linkedin.com/in/isrichards" target="_blank"
                             rel="noopener noreferrer">LinkedIn</a>.</p>
-                    <p><a href="https://github.com/isrichards6" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+                    <p><a href="https://github.com/isrichards6" target="_blank" rel="noopener noreferrer">GitHub
+                            Profile</a></p>
                 </div>
             </section>
 
@@ -118,6 +137,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 
 </html>
