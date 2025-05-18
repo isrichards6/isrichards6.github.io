@@ -1,4 +1,8 @@
 /* style.css */
+[v-cloak] {
+    display: none !important;
+}
+
 :root {
     --navbar-height: 56px;
 }
