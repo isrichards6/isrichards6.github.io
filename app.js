@@ -155,7 +155,7 @@ app.component('project-card', {
                     <p class="card-text">{{ description }}</p>
                     <div class="mt-auto pt-2">
                         <p class="card-text mb-2"><small class="text-muted">Technologies: {{ technologies.join(', ') }}</small></p>
-                        <a :href="link" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+                        <a :href="link" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
                     </div>
                 </div>
             </div>
