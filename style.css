@@ -146,6 +146,18 @@ main > section:nth-child(even) {
     border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0; /* Match card top corners */
 }
 
+.model-viewer-container {
+    position: relative;
+    display: block;
+}
+
+.wireframe-button {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
 #models .card-body {
     text-align: center;
 }

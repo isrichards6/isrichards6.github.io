@@ -226,12 +226,11 @@ toggleWireframe() {
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     reveal="auto">
-                </model-viewer>
-                
-                <div class="card-body">
-                    <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm">
+                    <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm wireframe-button">
                         {{ isWireframe ? 'Show Solid' : 'Show Wireframe' }}
                     </button>
+                </model-viewer>
+                <div class="card-body">
                     <h5 class="card-title">{{ title }}</h5>
                     <p v-if="description" class="card-text"><small>{{ description }}</small></p>
                 </div>
