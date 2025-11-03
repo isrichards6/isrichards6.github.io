@@ -35,6 +35,18 @@ const app = Vue.createApp({
             models: [
                 {
                     id: 'model1',
+                    title: 'Goblin Head',
+                    description: 'Low poly unlit goblin head. Tris: 384 Verts: 194',
+                    src: 'models/goblin.glb',
+                    alt: '3D model of a goblin head',
+                    poster: 'images/jeep.png',
+                    cameraOrbit: '80deg 75deg 100%',
+                    exposure: '1.0',
+                    shadowIntensity: '1',
+                    environmentImage: 'neutral'
+                },
+                {
+                    id: 'model2',
                     title: 'Jeep Cherokee Briarwood',
                     description: 'A voxelized Jeep model used for the player character in Final Fumes. (1:3 voxel-to-cm scale)',
                     src: 'models/jeep.glb',
@@ -46,7 +58,7 @@ const app = Vue.createApp({
                     environmentImage: 'neutral'
                 },
                 {
-                    id: 'model2',
+                    id: 'model3',
                     title: 'Vehicle Dash',
                     description: 'A x4 scaled version of the vehicle dash used for UI purposes in Final Fumes. (1:0.75 voxel-to-cm scale)',
                     src: 'models/dash.glb',
@@ -82,7 +94,7 @@ const app = Vue.createApp({
             });
             this.observer.disconnect();
         }
-    },
+    }
 });
 
 app.component('project-card', {
@@ -136,10 +148,42 @@ app.component('model-viewer-card', {
         shadowIntensity: { type: String, default: '1' },
         environmentImage: { type: String, default: 'neutral' } // 'neutral', null, or path to .hdr
     },
+    data() {
+        return {
+            isWireframe: false
+        };
+    },
+    methods: {
+toggleWireframe() {
+            this.isWireframe = !this.isWireframe;
+            const viewer = this.$refs.viewer;
+
+            if (!viewer) return;
+
+            viewer.shadowIntensity = this.isWireframe ? '0' : '1'
+
+            const scene = viewer[Object.getOwnPropertySymbols(viewer).find(e => e.description === 'scene')];
+
+            if (scene) {
+                scene.traverse((object) => {
+                    if (object.isMesh) {
+                        if (Array.isArray(object.material)) {
+                            object.material.forEach(material => material.wireframe = this.isWireframe);
+                        } else if (object.material) {
+                            object.material.wireframe = this.isWireframe;
+                        }
+                    }
+                });
+                scene.queueRender();
+            }
+        },
+    },
     template: `
         <div class="col-md-6 col-lg-4 mb-4 d-flex">
             <div class="card h-100 w-100 shadow-sm">
                 <model-viewer
+                    ref="viewer"
+                    @load="onModelLoad"
                     :id="'mv-' + id"
                     class="model-viewer-instance"
                     :src="src"
@@ -155,7 +199,11 @@ app.component('model-viewer-card', {
                     ar-modes="webxr scene-viewer quick-look"
                     reveal="auto">
                 </model-viewer>
+                
                 <div class="card-body">
+                    <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm">
+                        {{ isWireframe ? 'Show Solid' : 'Show Wireframe' }}
+                    </button>
                     <h5 class="card-title">{{ title }}</h5>
                     <p v-if="description" class="card-text"><small>{{ description }}</small></p>
                 </div>
