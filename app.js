@@ -14,6 +14,14 @@ const app = Vue.createApp({
             projects: [
                 {
                     id: 1,
+                    title: 'Aether Break',
+                    description: 'First person platformer made by studio of over 20 people. I was in lead of UI implementation, working closely with art team. Additionally developed save system and worked on controller compatability.',
+                    imageUrl: 'images/aether.png',
+                    link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
+                    technologies: ['C#', 'Unity', 'Figma']
+                },
+                {
+                    id: 2,
                     title: 'Final Fumes',
                     description: 'Feature complete atmospheric horror roguelike made with a team of 4.',
                     imageUrl: 'images/FinalFumesCover.png',
@@ -22,14 +30,22 @@ const app = Vue.createApp({
                     technologies: ['C#', 'Unity', 'MagicaVoxel', 'Blender']
                 },
                 {
-                    id: 2,
-                    title: 'Dungeon Diner',
-                    description: '2.5D cooking adventure prototype to show off a novel gameplay loop.',
-                    imageUrl: 'images/DungeonDinerCover.png',
-                    videoUrl: null,
-                    link: 'https://isrichards6.itch.io/dungeon-diner',
-                    technologies: ['C#', 'Unity', 'Aesprite']
+                    id: 3,
+                    title: "FINALLY WE'RE ALONE",
+                    description: 'Rhythm based top-down horror game. Made in 3 weeks solo for the 2025 Music Video Game Jam.',
+                    imageUrl: 'images/fwa.png',
+                    link: 'https://isrichards6.itch.io/finally-were-alone',
+                    technologies: ['C++', 'Unreal Engine', 'Blender']
                 }
+                // {
+                //     id: 4,
+                //     title: 'Dungeon Diner',
+                //     description: '2.5D cooking adventure prototype to show off a novel gameplay loop.',
+                //     imageUrl: 'images/DungeonDinerCover.png',
+                //     videoUrl: null,
+                //     link: 'https://isrichards6.itch.io/dungeon-diner',
+                //     technologies: ['C#', 'Unity', 'Aesprite']
+                // }
             ],
             // TODO: skills: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Bootstrap', 'C++', 'C#', 'Unity', 'Python']
             models: [
@@ -39,7 +55,7 @@ const app = Vue.createApp({
                     description: 'Low poly unlit goblin head. Tris: 384 Verts: 194',
                     src: 'models/goblin.glb',
                     alt: '3D model of a goblin head',
-                    poster: 'images/jeep.png',
+                    poster: 'images/goblin.png',
                     cameraOrbit: '80deg 75deg 100%',
                     exposure: '1.0',
                     shadowIntensity: '1',
@@ -47,28 +63,40 @@ const app = Vue.createApp({
                 },
                 {
                     id: 'model2',
-                    title: 'Jeep Cherokee Briarwood',
-                    description: 'A voxelized Jeep model used for the player character in Final Fumes. (1:3 voxel-to-cm scale)',
-                    src: 'models/jeep.glb',
-                    alt: '3D model of a concept spaceship',
-                    poster: 'images/jeep.png',
-                    cameraOrbit: '-30deg 75deg 100%',
+                    title: 'Fried egg',
+                    description: 'Stylized low poly unlit fried egg. Tris: 638 Verts: 236',
+                    src: 'models/egg.glb',
+                    alt: '3D model of a fried egg',
+                    poster: 'images/egg.png',
+                    cameraOrbit: '-50deg 70deg 100%',
                     exposure: '1.0',
                     shadowIntensity: '1',
                     environmentImage: 'neutral'
                 },
                 {
                     id: 'model3',
-                    title: 'Vehicle Dash',
-                    description: 'A x4 scaled version of the vehicle dash used for UI purposes in Final Fumes. (1:0.75 voxel-to-cm scale)',
-                    src: 'models/dash.glb',
-                    alt: '3D model of a character bust',
-                    poster: 'images/dash.png',
-                    cameraOrbit: '180deg 70deg 100%',
-                    exposure: '0.8',
-                    shadowIntensity: '0.8',
+                    title: 'Jeep Cherokee Briarwood',
+                    description: 'Voxelized Jeep model used for the player character in Final Fumes. (1:3 voxel-to-cm scale)',
+                    src: 'models/jeep.glb',
+                    alt: '3D model of a jeep',
+                    poster: 'images/jeep.png',
+                    cameraOrbit: '-30deg 75deg 100%',
+                    exposure: '1.0',
+                    shadowIntensity: '1',
                     environmentImage: 'neutral'
                 }
+                // {
+                //     id: 'model4',
+                //     title: 'Vehicle Dash',
+                //     description: 'A x4 scaled version of the vehicle dash used for UI purposes in Final Fumes. (1:0.75 voxel-to-cm scale)',
+                //     src: 'models/dash.glb',
+                //     alt: '3D model of a character bust',
+                //     poster: 'images/dash.png',
+                //     cameraOrbit: '180deg 70deg 100%',
+                //     exposure: '0.8',
+                //     shadowIntensity: '0.8',
+                //     environmentImage: 'neutral'
+                // }
             ]
         };
     },
