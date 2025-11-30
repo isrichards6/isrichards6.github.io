@@ -37,8 +37,7 @@ section {
 
 /* Specific Section Styling */
 #home {
-    background-color: #212529;
-    background-image: url('images/aether_screen_2.png');
+    background-image: url('images/aether_screen_1.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -48,7 +47,6 @@ section {
     image-rendering: crisp-edges;
     color: #f0f0f0;
     text-align: center;
-    
 }
 
 #home h1 {
@@ -93,10 +91,9 @@ main > section:nth-child(even) {
 }
 
 #home, #home h1, #home .lead, #home a {
-    color: #212529;
-    
+    color: #ffffff;
+    text-shadow: 0 0 0.2em #3b556e;
 }
-
 #home a:hover {
     color: #d0d0d0;
 }
@@ -111,23 +108,21 @@ main > section:nth-child(even) {
         justify-content: center;
         padding-top: 0;
         padding-bottom: 0;
-        
     }
 
     main > section > .container {
         padding-top: 30px;
         padding-bottom: 30px;
         width: 100%;
-        
     }
 
     /* Responsive font sizes for larger screens */
     #home h1 {
-        font-size: 4rem;
+        font-size: 5.5rem;
     }
 
     #home .lead {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 }
 
@@ -138,7 +133,6 @@ main > section:nth-child(even) {
     object-fit: cover;
     background-color: #e9ecef;
     cursor: pointer;
-    
 }
 
 .card-img-top:focus {
