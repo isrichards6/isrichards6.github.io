@@ -1,0 +1,104 @@
+export const ProjectsData = [
+    {
+        id: 1,
+        title: 'Heist',
+        description: '3rd person stealth game made as capstone project for 3D Technical Art course.',
+        imageUrl: 'images/heist.png',
+        link: '',
+        technologies: ['Blender','Unity', 'C#']
+    },
+    {
+        id: 2,
+        title: 'Aether Break',
+        description: '1st person platformer made by studio of over 20 people. I was in lead of UI implementation, working closely with art team. Additionally developed save system and worked on controller compatability.',
+        imageUrl: 'images/aether.png',
+        link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
+        technologies: ['Unity', 'C#', 'Figma']
+    },
+    {
+        id: 3,
+        title: "FINALLY WE'RE ALONE",
+        description: 'Rhythm based top-down horror game. Made in 2 weeks solo for the 2025 Music Video Game Jam.',
+        imageUrl: 'images/fwa.png',
+        link: 'https://isrichards6.itch.io/finally-were-alone',
+        technologies: ['Unreal Engine', 'C++']
+    },
+    {
+        id: 4,
+        title: 'Final Fumes',
+        description: 'Horror driving game made on team of 4 as capstone for Game Development course.',
+        imageUrl: 'images/FinalFumesCover.png',
+        videoUrl: 'videos/FinalFumesTrailer.mp4',
+        link: 'https://isrichards6.itch.io/final-fumes',
+        technologies: ['Unity', 'C#', 'MagicaVoxel']
+    },
+    
+    // {
+    //     id: 4,
+    //     title: 'Dungeon Diner',
+    //     description: '2.5D cooking adventure prototype to show off a novel gameplay loop.',
+    //     imageUrl: 'images/DungeonDinerCover.png',
+    //     videoUrl: null,
+    //     link: 'https://isrichards6.itch.io/dungeon-diner',
+    //     technologies: ['C#', 'Unity', 'Aesprite']
+    // }
+];
+
+export const ModelsData = [
+    {
+        id: 'burglar',
+        title: 'Burglar',
+        description: 'Main character for Heist.',
+        sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0',
+        src: '',
+        alt: 'Burglar Model'
+    },
+    {
+        id: 'model1',
+        title: 'Goblin Head',
+        description: 'Low poly unlit goblin head.',
+        src: 'models/goblin.glb',
+        alt: '3D model of a goblin head',
+        poster: 'images/goblin.png',
+        cameraOrbit: '80deg 75deg 100%',
+        exposure: '1.0',
+        shadowIntensity: '1',
+        environmentImage: 'neutral'
+    },
+    {
+        id: 'model2',
+        title: 'Fried egg',
+        description: 'Stylized low poly unlit fried egg.',
+        src: 'models/egg.glb',
+        alt: '3D model of a fried egg',
+        poster: 'images/egg.png',
+        cameraOrbit: '-50deg 70deg 100%',
+        exposure: '1.0',
+        shadowIntensity: '1',
+        environmentImage: 'neutral'
+    },
+    {
+        id: 'model3',
+        title: 'Jeep Cherokee Briarwood',
+        description: 'Voxelized Jeep model used for the player character in Final Fumes. (1:3 voxel-to-cm scale)',
+        src: 'models/jeep.glb',
+        alt: '3D model of a jeep',
+        poster: 'images/jeep.png',
+        cameraOrbit: '-30deg 75deg 100%',
+        exposure: '1.0',
+        shadowIntensity: '1',
+        environmentImage: 'neutral'
+    }
+    // {
+    //     id: 'model4',
+    //     title: 'Vehicle Dash',
+    //     description: 'A x4 scaled version of the vehicle dash used for UI purposes in Final Fumes. (1:0.75 voxel-to-cm scale)',
+    //     src: 'models/dash.glb',
+    //     alt: '3D model of a character bust',
+    //     poster: 'images/dash.png',
+    //     cameraOrbit: '180deg 70deg 100%',
+    //     exposure: '0.8',
+    //     shadowIntensity: '0.8',
+    //     environmentImage: 'neutral'
+    // }
+];

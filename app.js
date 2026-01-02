@@ -1,3 +1,6 @@
+import { ProjectsData, ModelsData } from "./data.js";
+import { ProjectCard, ModelCard } from "./components.js";
+
 const app = Vue.createApp({
     data() {
         return {
@@ -11,111 +14,13 @@ const app = Vue.createApp({
                 rootMargin: '-50% 0px -50% 0px',
                 threshold: 0
             },
-            projects: [
-                {
-                    id: 1,
-                    title: 'Heist',
-                    description: '3rd person stealth game made as capstone project for 3D Technical Art course.',
-                    imageUrl: 'images/heist.png',
-                    link: '',
-                    technologies: ['Blender','Unity', 'C#']
-                },
-                {
-                    id: 2,
-                    title: 'Aether Break',
-                    description: '1st person platformer made by studio of over 20 people. I was in lead of UI implementation, working closely with art team. Additionally developed save system and worked on controller compatability.',
-                    imageUrl: 'images/aether.png',
-                    link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
-                    technologies: ['Unity', 'C#', 'Figma']
-                },
-                {
-                    id: 3,
-                    title: "FINALLY WE'RE ALONE",
-                    description: 'Rhythm based top-down horror game. Made in 2 weeks solo for the 2025 Music Video Game Jam.',
-                    imageUrl: 'images/fwa.png',
-                    link: 'https://isrichards6.itch.io/finally-were-alone',
-                    technologies: ['Unreal Engine', 'C++']
-                },
-                {
-                    id: 4,
-                    title: 'Final Fumes',
-                    description: 'Horror driving game made on team of 4 as capstone for Game Development course.',
-                    imageUrl: 'images/FinalFumesCover.png',
-                    videoUrl: 'videos/FinalFumesTrailer.mp4',
-                    link: 'https://isrichards6.itch.io/final-fumes',
-                    technologies: ['Unity', 'C#', 'MagicaVoxel']
-                },
-                
-                // {
-                //     id: 4,
-                //     title: 'Dungeon Diner',
-                //     description: '2.5D cooking adventure prototype to show off a novel gameplay loop.',
-                //     imageUrl: 'images/DungeonDinerCover.png',
-                //     videoUrl: null,
-                //     link: 'https://isrichards6.itch.io/dungeon-diner',
-                //     technologies: ['C#', 'Unity', 'Aesprite']
-                // }
-            ],
-            // TODO: skills: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Bootstrap', 'C++', 'C#', 'Unity', 'Python']
-            models: [
-                {
-                    id: 'burglar',
-                    title: 'Burglar',
-                    description: 'Main character for Heist.',
-                    sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0',
-                    src: '',
-                    alt: 'Burglar Model'
-                },
-                {
-                    id: 'model1',
-                    title: 'Goblin Head',
-                    description: 'Low poly unlit goblin head.',
-                    src: 'models/goblin.glb',
-                    alt: '3D model of a goblin head',
-                    poster: 'images/goblin.png',
-                    cameraOrbit: '80deg 75deg 100%',
-                    exposure: '1.0',
-                    shadowIntensity: '1',
-                    environmentImage: 'neutral'
-                },
-                {
-                    id: 'model2',
-                    title: 'Fried egg',
-                    description: 'Stylized low poly unlit fried egg.',
-                    src: 'models/egg.glb',
-                    alt: '3D model of a fried egg',
-                    poster: 'images/egg.png',
-                    cameraOrbit: '-50deg 70deg 100%',
-                    exposure: '1.0',
-                    shadowIntensity: '1',
-                    environmentImage: 'neutral'
-                },
-                {
-                    id: 'model3',
-                    title: 'Jeep Cherokee Briarwood',
-                    description: 'Voxelized Jeep model used for the player character in Final Fumes. (1:3 voxel-to-cm scale)',
-                    src: 'models/jeep.glb',
-                    alt: '3D model of a jeep',
-                    poster: 'images/jeep.png',
-                    cameraOrbit: '-30deg 75deg 100%',
-                    exposure: '1.0',
-                    shadowIntensity: '1',
-                    environmentImage: 'neutral'
-                }
-                // {
-                //     id: 'model4',
-                //     title: 'Vehicle Dash',
-                //     description: 'A x4 scaled version of the vehicle dash used for UI purposes in Final Fumes. (1:0.75 voxel-to-cm scale)',
-                //     src: 'models/dash.glb',
-                //     alt: '3D model of a character bust',
-                //     poster: 'images/dash.png',
-                //     cameraOrbit: '180deg 70deg 100%',
-                //     exposure: '0.8',
-                //     shadowIntensity: '0.8',
-                //     environmentImage: 'neutral'
-                // }
-            ]
+            projects: ProjectsData,
+            models: ModelsData,
         };
+    },
+    components: {
+        'project-card': ProjectCard,
+        'model-viewer-card': ModelCard
     },
     methods: {
         handleIntersection(entries) {
@@ -142,140 +47,6 @@ const app = Vue.createApp({
     }
 });
 
-app.component('project-card', {
-    props: {
-        title: { type: String, required: true },
-        description: { type: String, required: true },
-        imageUrl: { type: String, required: true },
-        videoUrl: { type: String, default: null },
-        link: { type: String, required: true },
-        technologies: { type: Array, default: () => [] }
-    },
-    template: `
-        <div class="col-md-6 col-lg-4 mb-4 d-flex">
-            <div class="card h-100 w-100 shadow-sm">
-                <template v-if="videoUrl">
-                    <video class="card-img-top" :poster="imageUrl" autoplay loop muted playsinline controls>
-                        <source :src="videoUrl" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </template>
-                <template v-else>
-                    <a :href="link" target="_blank" rel="noopener noreferrer">
-                        <img :src="imageUrl" class="card-img-top" :alt="title + ' project image'">
-                    </a>
-                </template>
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">
-                        <a v-if="link" :href="link" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">{{ title }}</a>
-                        <span v-else class="text-dark">{{ title }}</span>
-                    </h5>
-                    <p class="card-text">{{ description }}</p>
-                    <div class="mt-auto pt-2">
-                        <p class="card-text mb-2"><small class="text-muted">Technologies: {{ technologies.join(', ') }}</small></p>
-                        <a v-if="link" :href="link" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                        <button v-else class="btn btn-outline-secondary btn-sm" disabled>Coming Soon</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `
-});
-
-app.component('model-viewer-card', {
-    props: {
-        id: { type: String, required: true },
-        title: { type: String, required: true },
-        description: { type: String, default: '' },
-        sketchfabSrc: { type: String, default: null },
-        src: { type: String, required: true },
-        alt: { type: String, required: true },
-        poster: { type: String, default: null },
-        cameraOrbit: { type: String, default: '0deg 75deg 105%' },
-        exposure: { type: String, default: '1.0' },
-        shadowIntensity: { type: String, default: '1' },
-        environmentImage: { type: String, default: 'neutral' } // 'neutral', null, or path to .hdr
-    },
-    data() {
-        return {
-            isWireframe: false
-        };
-    },
-    methods: {
-        toggleWireframe() {
-            this.isWireframe = !this.isWireframe;
-            const viewer = this.$refs.viewer;
-
-            if (!viewer) return;
-
-            viewer.shadowIntensity = this.isWireframe ? '0' : '1'
-
-            const scene = viewer[Object.getOwnPropertySymbols(viewer).find(e => e.description === 'scene')];
-
-            if (scene) {
-                scene.traverse((object) => {
-                    if (object.isMesh) {
-                        if (Array.isArray(object.material)) {
-                            object.material.forEach(material => material.wireframe = this.isWireframe);
-                        } else if (object.material) {
-                            object.material.wireframe = this.isWireframe;
-                        }
-                    }
-                });
-                scene.queueRender();
-            }
-        },
-    },
-    template: `
-        <div class="col-md-10 col-lg-6 mb-4 d-flex">
-            <div class="card h-100 w-100 shadow-sm">
-                <template v-if="sketchfabSrc">
-                    <iframe 
-                        class="model-viewer-instance" 
-                        :src="sketchfabSrc" 
-                        title="Sketchfab Viewer" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; xr-spatial-tracking" 
-                        xr-spatial-tracking 
-                        execution-while-out-of-viewport 
-                        execution-while-not-rendered 
-                        web-share 
-                        allowfullscreen 
-                        mozallowfullscreen="true" 
-                        webkitallowfullscreen="true">
-                    </iframe>
-                </template>
-                <template v-else>
-                    <model-viewer
-                        ref="viewer"
-                        @load="onModelLoad"
-                        :id="'mv-' + id"
-                        class="model-viewer-instance"
-                        :src="src"
-                        :alt="alt"
-                        :poster="poster"
-                        :camera-orbit="cameraOrbit"
-                        :exposure="exposure"
-                        :shadow-intensity="shadowIntensity"
-                        :environment-image="environmentImage"
-                        camera-controls
-                        touch-action="pan-y"
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                        reveal="auto">
-                        <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm wireframe-button">
-                            {{ isWireframe ? 'Show Solid' : 'Show Wireframe' }}
-                        </button>
-                    </model-viewer>
-                </template>
-                <div class="card-body">
-                    <h5 class="card-title">{{ title }}</h5>
-                    <p v-if="description" class="card-text"><small>{{ description }}</small></p>
-                </div>
-            </div>
-        </div>
-    `
-});
 
 app.config.compilerOptions.isCustomElement = tag => tag === 'model-viewer';
 
