@@ -60,7 +60,7 @@ export const ModelsData = [
         id: 'burglar',
         title: 'Burglar',
         description: 'Main character for Heist.',
-        sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0',
+        sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
         src: '',
         alt: 'Burglar Model'
     },
