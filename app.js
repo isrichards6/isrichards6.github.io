@@ -5,8 +5,8 @@ const app = Vue.createApp({
     data() {
         return {
             brandName: 'Isaiah Richards',
-            pageTitle: 'Welcome to My Portfolio!',
-            welcomeMessage: 'Check out my work below.',
+            pageTitle: 'Isaiah Richards',
+            welcomeMessage: 'Game Developer',
             activeSection: 'home',
             isManualScrolling: false,
             observer: null,
