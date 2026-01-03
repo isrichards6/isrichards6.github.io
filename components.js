@@ -120,9 +120,9 @@ export const ModelCard = {
                         ar
                         ar-modes="webxr scene-viewer quick-look"
                         reveal="auto">
-                        <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm wireframe-button">
-                            {{ isWireframe ? 'Show Solid' : 'Show Wireframe' }}
-                        </button>
+                        <!-- <button @click="toggleWireframe" class="btn btn-outline-secondary btn-sm wireframe-button">
+                             {{ isWireframe ? 'Show Solid' : 'Show Wireframe' }}
+                        </button> -->
                     </model-viewer>
                 </template>
                 <div class="card-body">
