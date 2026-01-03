@@ -9,9 +9,10 @@ export const ProjectsData = [
     },
     {
         id: 2,
-        title: 'Aether Break',
+        title: 'Aetherbreak',
         description: '1st person platformer made by studio of over 20 people. I was in lead of UI implementation, working closely with art team. Additionally developed save system and worked on controller compatability.',
         imageUrl: 'images/aether.png',
+        videoUrl: 'videos/Aetherbreak_Showcase.mp4',
         link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
         technologies: ['Unity', 'C#', 'Figma']
     },
