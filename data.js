@@ -17,7 +17,7 @@ export const ProjectsData = [
         id: 2,
         title: 'Aetherbreak',
         description:    `1st person platformer made on team of 20+ during my 3 month internship at WolverineSoft Studio. I was lead on UI implementation, working closely with art team. 
-                        Additionally I was responsible for engineering the save system and also worked on providing full controller support.`,
+                        Additionally was responsible for engineering the save system and also worked on providing full controller support.`,
         imageUrl: 'images/aether.png',
         videoUrl: 'videos/Aetherbreak_Showcase.mp4',
         link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
