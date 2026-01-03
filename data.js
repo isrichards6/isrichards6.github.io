@@ -2,7 +2,13 @@ export const ProjectsData = [
     {
         id: 1,
         title: 'Heist',
-        description: '3rd person stealth game made as capstone project for 3D Technical Art course.',
+        description:    `3rd person stealth game made as capstone project for 3D Technical Art course. 
+                        Worked in technical artist role modeling, texturing, rigging, and animating all characters and props in the game.
+                        Additionally, worked on animation, stealth, and NPC AI systems. 
+                        
+                        
+                        
+                        <br><br><strong>Preview coming January 5th, 2025</strong>`,
         imageUrl: 'images/heist.png',
         link: '',
         technologies: ['Blender','Unity', 'C#']
@@ -10,7 +16,8 @@ export const ProjectsData = [
     {
         id: 2,
         title: 'Aetherbreak',
-        description: '1st person platformer made by studio of over 20 people. I was in lead of UI implementation, working closely with art team. Additionally developed save system and worked on controller compatability.',
+        description:    `1st person platformer made on team of 20+ during my 3 month internship at WolverineSoft Studio. I was lead on UI implementation, working closely with art team. 
+                        Additionally I was responsible for engineering the save system and also worked on providing full controller support.`,
         imageUrl: 'images/aether.png',
         videoUrl: 'videos/Aetherbreak_Showcase.mp4',
         link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
@@ -19,7 +26,9 @@ export const ProjectsData = [
     {
         id: 3,
         title: "FINALLY WE'RE ALONE",
-        description: 'Rhythm based top-down horror game. Made in 2 weeks solo for the 2025 Music Video Game Jam.',
+        description:    `Rhythm based escape game. Made in 2 weeks solo for the 2025 Music Video Game Jam. 
+                        Implemented behavior tree based AI decision making that utilized pathfinding via A* algorithm. 
+                        Created wall dithering shader to prevent view from being obstructed in top-down view.`,
         imageUrl: 'images/fwa.png',
         link: 'https://isrichards6.itch.io/finally-were-alone',
         technologies: ['Unreal Engine', 'C++']
@@ -27,11 +36,12 @@ export const ProjectsData = [
     {
         id: 4,
         title: 'Final Fumes',
-        description: 'Horror driving game made on team of 4 as capstone for Game Development course.',
+        description:    `Vehicle-based horror roguelite made on team of 4 as capstone for Game Development course. In addition to my role as producer, I was in charge of implementing the physics-based vehicle controller and model. 
+                        I was also lead on asset optimization via Blender, as well as creating and implementing the diegetic UI elements.`,
         imageUrl: 'images/FinalFumesCover.png',
         videoUrl: 'videos/FinalFumesTrailer.mp4',
         link: 'https://isrichards6.itch.io/final-fumes',
-        technologies: ['Unity', 'C#', 'MagicaVoxel']
+        technologies: ['Unity', 'C#', 'MagicaVoxel', 'Blender']
     },
     
     // {

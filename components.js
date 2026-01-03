@@ -27,7 +27,7 @@ export const ProjectCard = {
                         <a v-if="link" :href="link" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">{{ title }}</a>
                         <span v-else class="text-dark">{{ title }}</span>
                     </h5>
-                    <p class="card-text">{{ description }}</p>
+                    <p class="card-text" v-html="description"></p>
                     <div class="mt-auto pt-2">
                         <p class="card-text mb-2"><small class="text-muted">Technologies: {{ technologies.join(', ') }}</small></p>
                         <a v-if="link" :href="link" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
