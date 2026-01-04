@@ -44,7 +44,7 @@ section {
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
-    color: #f0f0f0;
+    background-color: #212529;
     text-align: center;
 }
 
@@ -98,10 +98,10 @@ main > section:nth-child(even) {
 
 /* title box */
 .home-title-box {
-    background-color: #212929b2;
+    /* background-color: #212929b2;
+    backdrop-filter: blur(5px); */
     padding: 2rem 3rem;
     display: inline-block;
-    backdrop-filter: blur(5px);
     max-width: 90%;
 }
 
