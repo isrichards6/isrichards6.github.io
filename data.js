@@ -8,7 +8,7 @@ export const ProjectsData = [
                         
                         
                         
-                        <br><br><strong>Preview coming January 5th, 2025</strong>`,
+                        <br><br><strong>Demo coming January 8th, 2025 at 1:30pm EST</strong>`,
         imageUrl: 'images/heist.png',
         link: '',
         technologies: ['Blender','Unity', 'C#']
