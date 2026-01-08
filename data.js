@@ -5,7 +5,7 @@ export const ProjectsData = [
         description:    `3rd person stealth game made as capstone project for 3D Technical Art course. 
                         Worked in technical artist role modeling, texturing, rigging, and animating all characters and assets in the game (except the skybox).
                         Additionally, architected systems for managing animation, stealth, and NPC AI.`,
-        imageUrl: 'images/heist.png',
+        imageUrl: 'images/heist.jpg',
         link: 'https://isrichards6.itch.io/heist',
         technologies: ['Blender','Unity', 'C#']
     },
