@@ -63,7 +63,7 @@ export const ModelsData = [
     {
         id: 'mortar-low',
         title: 'Mortar & Pestle Retopology',
-        description: 'Retopologized version of 3D scan resulting in 94% vertex reduction. Mortar and pestle seperated into two objects and texture gaps filled. Triangles: 1.5k, Vertices: 731',
+        description: 'Optimized game-ready asset derived from raw scan data. Performed manual retopology in Blender to achieve a 94% vertex reduction (25k to 731 verts) while preserving silhouette. Separated mesh into dynamic sub-objects and utilized texture in-painting to fix occlusion artifacts. Triangles: 1.5k, Vertices: 731',
         sketchfabSrc: 'https://sketchfab.com/models/6d64db7df3ff4fccb55cdbe7e7f7da2d/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
         src: '',
         alt: 'Burglar Model'
