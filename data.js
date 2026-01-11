@@ -53,25 +53,41 @@ export const ProjectsData = [
 
 export const ModelsData = [
     {
-        id: 'burglar',
-        title: 'Burglar',
-        description: 'Main character for Heist.',
-        sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
+        id: 'mortar-high',
+        title: 'Mortar & Pestle 3D Scan',
+        description: '3D scan made using Kira Engine. Triangles: 25k, Vertices: 12.5k',
+        sketchfabSrc: 'https://sketchfab.com/models/4f84a061d71f4213941c48346683205a/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
         src: '',
         alt: 'Burglar Model'
     },
     {
-        id: 'model1',
-        title: 'Goblin Head',
-        description: 'Low poly unlit goblin head.',
-        src: 'models/goblin.glb',
-        alt: '3D model of a goblin head',
-        poster: 'images/goblin.png',
-        cameraOrbit: '80deg 75deg 100%',
-        exposure: '1.0',
-        shadowIntensity: '1',
-        environmentImage: 'neutral'
+        id: 'mortar-low',
+        title: 'Mortar & Pestle Retopology',
+        description: 'Retopologized version of 3D scan resulting in 94% vertex reduction. Mortar and pestle seperated into two objects and texture gaps filled. Triangles: 1.5k, Vertices: 731',
+        sketchfabSrc: 'https://sketchfab.com/models/6d64db7df3ff4fccb55cdbe7e7f7da2d/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
+        src: '',
+        alt: 'Burglar Model'
     },
+    {
+        id: 'burglar',
+        title: 'Burglar',
+        description: 'Main character for Heist. Fully rigged and animated. Pixel textured using Aseprite and Blender.',
+        sketchfabSrc: 'https://sketchfab.com/models/dfca9cdfb2b24f5db28c83f03880b3fc/embed?ui_theme=dark&ui_vr=0&ui_ar=0&ui_inspector=0&ui_settings=0&ui_help=0&ui_infos=0&autostart=1&autospin=0',
+        src: '',
+        alt: 'Burglar Model'
+    },
+    // {
+    //     id: 'goblin',
+    //     title: 'Goblin Head',
+    //     description: 'Low poly unlit goblin head.',
+    //     src: 'models/goblin.glb',
+    //     alt: '3D model of a goblin head',
+    //     poster: 'images/goblin.png',
+    //     cameraOrbit: '80deg 75deg 100%',
+    //     exposure: '1.0',
+    //     shadowIntensity: '1',
+    //     environmentImage: 'neutral'
+    // },
     {
         id: 'model2',
         title: 'Fried egg',
