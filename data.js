@@ -2,7 +2,7 @@ export const ProjectsData = [
     {
         id: 1,
         title: 'Heist',
-        description:    `3rd person stealth game made as capstone project for 3D Technical Art course. 
+        description:    `3rd person stealth game made as final project for 3D Technical Art course. 
                         Worked in technical artist role modeling, texturing, rigging, and animating all characters and assets in the game (except the skybox).
                         Additionally, architected systems for managing animation, stealth, and NPC AI.`,
         imageUrl: 'images/heist.jpg',
