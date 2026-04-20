@@ -34,8 +34,12 @@
                                 href="#home" @click="navigateTo('home')">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" :class="{ 'active': activeSection === 'projects' }" href="#projects"
-                                @click="navigateTo('projects')">Games</a>
+                            <a class="nav-link" :class="{ 'active': activeSection === 'engine' }" href="#engine"
+                                @click="navigateTo('engine')">Engine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" :class="{ 'active': activeSection === 'games' }" href="#games"
+                                @click="navigateTo('games')">Games</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" :class="{ 'active': activeSection === 'models' }" href="#models"
@@ -69,8 +73,57 @@
                 </div>
             </section>
 
-            <!-- Section: Projects -->
-            <section id="projects">
+                        <!-- Section: Engine -->
+            <section id="engine" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Enginator (Custom Game Engine)</h2>
+                    <div class="card shadow-sm mb-5">
+                        <div class="row g-0">
+                            <!-- Video Embed Column -->
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="ratio ratio-16x9 w-100 p-3">
+                                    <video controls class="rounded">
+                                        <source src="videos/Engine.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <!-- Tech Stack Column -->
+                            <div class="col-lg-6">
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title mb-2">Core Language & Math</h5>
+                                    <ul>
+                                        <li>C++ (C++17)</li>
+                                        <li>GLM (OpenGL Mathematics)</li>
+                                    </ul>
+
+                                    <h5 class="card-title mb-2 mt-4">Scripting & Data</h5>
+                                    <ul>
+                                        <li>Lua</li>
+                                        <li>LuaBridge</li>
+                                        <li>RapidJSON</li>
+                                    </ul>
+
+                                    <h5 class="card-title mb-2 mt-4">Rendering, Media, & Input</h5>
+                                    <ul>
+                                        <li>SDL2</li>
+                                    </ul>
+
+                                    <h5 class="card-title mb-2 mt-4">Middleware Integration</h5>
+                                    <ul>
+                                        <li>DragonBones</li>
+                                        <!-- <li>Box2D</li>
+                                        <li>Spine 2D</li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Games -->
+            <section id="games">
                 <div class="container">
                     <h2 class="text-center mb-4">Games</h2>
                     <div class="row">
