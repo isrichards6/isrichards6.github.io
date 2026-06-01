@@ -16,7 +16,7 @@ export const ProjectsData = [
                         Additionally was responsible for engineering the save system and also worked on providing full controller support.`,
         imageUrl: 'images/aether.png',
         videoUrl: 'videos/Aetherbreak_Showcase.mp4',
-        link: 'https://wolverinesoft-studio.itch.io/aetherbreak',
+        link: 'https://store.steampowered.com/app/3987160/Aetherbreak/',
         technologies: ['Unity', 'C#', 'Figma']
     },
     {
